@@ -28,9 +28,9 @@ def adding_data():
     print("do you want to add data? yes or no")
     entry=input()
     if entry=="yes":
-        car_type=print("Enter the car type : ",car_type=input())
-        brand=print("Enter the car brand : ",input())
-        price=print("Enter the car price : ",input())
+        car_type=input("Enter the car type : ")
+        brand=input("Enter the brand : ")
+        price=input("Enter the Price : ")
         add_data={
             'Types of cars':car_type,
             'Brand':brand,
