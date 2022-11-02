@@ -1,4 +1,15 @@
+# import OS module
 import os
+ 
+# Get the list of all files and directories
+path =r"C:/Users/jeeve/OneDrive/Public/Documents/code/jeevesh-project"
+dir_list = os.listdir(path)
+ 
+print("Files and directories in '", path, "' :")
+ 
+# prints all files
+print(dir_list)
+
 import pandas as pd
 from csv import DictWriter
  
@@ -54,18 +65,24 @@ adding_data()
 
 
 def first():
-    print("get val for your preferd top row")
-    val=int(input())
+    val=int(input("Enter int value for top row: "))
     print(output.head(val))
     
 first()
 
 def bottom():
-    print("get val for your preferd top row")
-    val=int(input())
+    val=int(input("Enter int value for bottom row: "))
     print(output.tail(val))
     
 bottom()
+
+def between():
+    val1=int(input("Enter the first value: "))
+    val2=int(input("Enter the last value: " ))
+    x=output.iat[val1,val2]
+    print(x)
+
+between()    
 
 def basic():
     print("Do you want basic stat? yes or no")
@@ -77,3 +94,4 @@ def basic():
 
 
 basic()
+
